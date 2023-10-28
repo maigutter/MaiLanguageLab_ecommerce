@@ -8,7 +8,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 
-function CartSummaryTable({ cart }) {
+function CartDetail({ cart }) {
   return (
     <TableContainer>
       <Table variant="simple">
@@ -16,7 +16,8 @@ function CartSummaryTable({ cart }) {
           <Tr>
             <Th>Curso</Th>
             <Th>Cantidad</Th>
-            <Th>Precio</Th>
+            <Th>Precio por curso</Th>
+            <Th>Precio total </Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -34,4 +35,4 @@ function CartSummaryTable({ cart }) {
   );
 }
 
-export default CartSummaryTable;
+export default CartDetail;

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import CartContext from "../context/cart.context";
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import CartSummaryTable from "../components/CartSummaryTable";
+import CartDetail from "../Components/CartDetail";
 
 function Cart() {
   const { cart } = useContext(CartContext);
@@ -13,7 +13,7 @@ function Cart() {
   return (
     <Flex flexDir={"column"}>
       <Heading>Resumen del carrito</Heading>
-      <CartSummaryTable cart={cart} />
+      <CartDetail cart={cart} />
       <Button onClick={() => navigate("/checkout")}>Finalizar Compra</Button>
     </Flex>
   );
