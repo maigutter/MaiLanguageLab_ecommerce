@@ -19,7 +19,7 @@ function Category() {
 
   return (
     <Flex flexDir={"column"} gap="3">
-      <Heading>Productos de categoría: {params.categoryName}</Heading>
+      <Heading>Productos de categoría: {params.Category}</Heading>
       <Wrap spacing={"30px"}>
         {courses.map((course) => (
           <WrapItem key={course.id}>
