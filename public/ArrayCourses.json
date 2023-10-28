@@ -1,0 +1,144 @@
+{
+  "CoursesArray": [
+    {
+      "id": 1,
+      "title": "English - Beginners",
+      "price": 50,
+      "category": "Short Course",
+      "description": "An introductory course for those new to the English language."
+    },
+    {
+      "id": 2,
+      "title": "English - Intermediate",
+      "price": 50,
+      "category": "Short Course",
+      "description": "For learners with a basic grasp on English, aiming for conversational fluency."
+    },
+    {
+      "id": 3,
+      "title": "English - Upper Intermediate",
+      "price": 55,
+      "category": "Short Course",
+      "description": "Polish your skills and gain deeper insights into the language."
+    },
+    {
+      "id": 4,
+      "title": "English - Advanced",
+      "price": 60,
+      "category": "Annual Course",
+      "description": "Master the intricacies and nuances of the English language."
+    },
+    {
+      "id": 5,
+      "title": "English - Proficiency",
+      "price": 65,
+      "category": "Annual Course",
+      "description": "Achieve proficiency with rigorous training and comprehensive modules."
+    },
+    {
+      "id": 6,
+      "title": "English - Business Communication",
+      "price": 70,
+      "category": "Annual Course",
+      "description": "Develop English skills tailored for the professional and business environment."
+    },
+    {
+      "id": 7,
+      "title": "English - IELTS Preparation",
+      "price": 80,
+      "category": "Intensive Short Course",
+      "description": "Targeted training to ace the IELTS exam."
+    },
+    {
+      "id": 8,
+      "title": "English - TOEFL Preparation",
+      "price": 80,
+      "category": "Intensive Short Course",
+      "description": "Focused sessions to prepare for the TOEFL examination."
+    },
+    {
+      "id": 9,
+      "title": "English - Quick Speaking Boost",
+      "price": 75,
+      "category": "Intensive Short Course",
+      "description": "Rapidly enhance your speaking skills with practical exercises."
+    },
+    {
+      "id": 10,
+      "title": "English - Advanced Writing Workshop",
+      "price": 110,
+      "category": "Intensive Annual Course",
+      "description": "Dive deep into writing styles, techniques, and structures for advanced learners."
+    },
+    {
+      "id": 11,
+      "title": "English - Literature Deep Dive",
+      "price": 120,
+      "category": "Intensive Annual Course",
+      "description": "A comprehensive exploration of classic and modern English literature."
+    },
+    {
+      "id": 12,
+      "title": "English - Comprehensive Grammar Review",
+      "price": 110,
+      "category": "Intensive Annual Course",
+      "description": "Refine your grasp on English grammar with in-depth modules."
+    },
+    {
+      "id": 13,
+      "title": "English - Vocabulary Expansion",
+      "price": 55,
+      "category": "Short Course",
+      "description": "Broaden your vocabulary for better expression and comprehension."
+    },
+    {
+      "id": 14,
+      "title": "English - Listening & Comprehension Techniques",
+      "price": 60,
+      "category": "Annual Course",
+      "description": "Enhance listening skills with real-world audio and exercises."
+    },
+    {
+      "id": 15,
+      "title": "English - Conversational English",
+      "price": 80,
+      "category": "Intensive Short Course",
+      "description": "Achieve fluency in everyday conversations with practical scenarios."
+    },
+    {
+      "id": 16,
+      "title": "English - Accent Reduction",
+      "price": 130,
+      "category": "Intensive Annual Course",
+      "description": "Work on pronunciation and reduce native accent influences."
+    },
+    {
+      "id": 17,
+      "title": "English - Idioms & Phrasal Verbs",
+      "price": 50,
+      "category": "Short Course",
+      "description": "Familiarize yourself with commonly used idioms and phrasal verbs."
+    },
+    {
+      "id": 18,
+      "title": "English - Cultural Contexts & Conversations",
+      "price": 65,
+      "category": "Annual Course",
+      "description": "Dive into the cultural aspects of English and how they influence communication."
+    },
+    {
+      "id": 19,
+      "title": "English - Pronunciation Techniques",
+      "price": 85,
+      "category": "Intensive Short Course",
+      "description": "Fine-tune your pronunciation for clearer communication."
+    },
+    {
+      "id": 20,
+      "title": "English - Full Language Immersion",
+      "price": 140,
+      "category": "Intensive Annual Course",
+      "description": "Experience a complete immersion into English language and culture."
+    }
+  ]
+}
