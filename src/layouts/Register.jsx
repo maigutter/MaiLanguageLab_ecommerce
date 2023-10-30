@@ -1,6 +1,8 @@
-import { Card, CardBody, Text, useToast } from "@chakra-ui/react";
+import { Flex, Heading, useToast } from "@chakra-ui/react";
 import useRegisterForm from "../hooks/useForm";
-import BuyerForm from "../components/BuyerForm";
+import RegisterForm from "../Components/RegisterForm";
+
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 function Register() {
   const toast = useToast();
@@ -40,14 +42,42 @@ function Register() {
       return;
     }
 
-    return (
-      <Card>
-        <CardBody>
-          <Text>You've successfully registered</Text>
-        </CardBody>
-      </Card>
-    );
+    sendUser();
   };
+
+  const sendUser = () => {
+    const db = getFirestore();
+
+    const userCollection = collection(db, "Users");
+    addDoc(userCollection, {
+      user: {
+        name: values.name,
+        lastName: values.lastName,
+        phone: values.phone,
+        email: values.email,
+        usertype: "student",
+        admin: false,
+      },
+    }).then(() => {
+      toast({
+        title: "Usuario registrado",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    });
+  };
+
+  return (
+    <Flex flexDir={"column"}>
+      <Heading>Formulario de registro </Heading>
+      <RegisterForm
+        onSubmit={onSubmit}
+        values={values}
+        handleChange={handleChange}
+      />
+    </Flex>
+  );
 }
 
 export default Register;

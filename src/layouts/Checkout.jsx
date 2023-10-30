@@ -4,7 +4,7 @@ import { useContext } from "react";
 import CartContext from "../context/cart.context";
 import useForm from "../hooks/useForm";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import BuyerForm from "../components/BuyerForm";
+import RegisterForm from "../Components/RegisterForm";
 
 function Checkout() {
   const { cart } = useContext(CartContext);
