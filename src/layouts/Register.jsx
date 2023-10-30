@@ -1,7 +1,6 @@
 import { Flex, Heading, useToast } from "@chakra-ui/react";
-import useRegisterForm from "../hooks/useForm";
+import useRegisterForm from "../hooks/useRegisterForm";
 import RegisterForm from "../Components/RegisterForm";
-
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 function Register() {

@@ -2,7 +2,7 @@ import { Flex, Heading, useToast } from "@chakra-ui/react";
 import CartDetail from "../Components/CartDetail";
 import { useContext } from "react";
 import CartContext from "../context/cart.context";
-import useForm from "../hooks/useForm";
+import useRegisterForm from "../hooks/useRegisterForm";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import RegisterForm from "../Components/RegisterForm";
 
@@ -10,7 +10,7 @@ function Checkout() {
   const { cart } = useContext(CartContext);
   const toast = useToast();
 
-  const [values, handleChange] = useForm({
+  const [values, handleChange] = useRegisterForm({
     name: "",
     lastName: "",
     phone: "",

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useCoursesByCategory from "../hooks/useCoursesByCategory";
-import { Card } from "../hooks/Card";
+import CardShop from "../Components/Card";
 import { Flex, Heading, Wrap, WrapItem, Spinner } from "@chakra-ui/react";
 import { useContext } from "react";
 import CartContext from "../context/cart.context";
@@ -23,7 +23,7 @@ function Category() {
       <Wrap spacing={"30px"}>
         {courses.map((course) => (
           <WrapItem key={course.id}>
-            <Card course={course} handleClick={addItem} />
+            <CardShop course={course} handleClick={addItem} />
           </WrapItem>
         ))}
       </Wrap>
