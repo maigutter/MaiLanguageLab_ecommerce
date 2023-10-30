@@ -7,7 +7,7 @@ import { Flex, Spinner } from "@chakra-ui/react";
 import CartContext from "../context/cart.context";
 
 function CoursesShop() {
-  const { course, isLoading } = useCourses();
+  const { courses, isLoading } = useCourses();
   const { addItem } = useContext(CartContext);
 
   if (isLoading) {
@@ -18,7 +18,7 @@ function CoursesShop() {
     <Flex flexDir={"column"}>
       <PageTitle title="Shop" />
       <ItemListContainer greeting="You can find the courses available here" />
-      <CardShop course={course} handleClick={addItem} />
+      <CardShop course={courses} handleClick={addItem} />
     </Flex>
   );
 }
