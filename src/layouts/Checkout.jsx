@@ -48,6 +48,7 @@ function Checkout() {
       return;
     }
 
+    sendUser();
     sendOrder();
   };
 
@@ -75,6 +76,29 @@ function Checkout() {
     });
   };
 
+  const sendUser = () => {
+    const db = getFirestore();
+
+    const userCollection = collection(db, "Users");
+    addDoc(userCollection, {
+      user: {
+        name: values.name,
+        lastName: values.lastName,
+        phone: values.phone,
+        email: values.email,
+        usertype: "student",
+        admin: false,
+      },
+    }).then(() => {
+      toast({
+        title: "Usuario registrado",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    });
+  };
+
   return (
     <Flex flexDir={"column"} justifyContent={"space-between"} gap={5}>
       <Flex flexDir={"column"}>
@@ -83,7 +107,7 @@ function Checkout() {
       </Flex>
       <Flex flexDir={"column"}>
         <Heading>Formulario de compra</Heading>
-        <BuyerForm
+        <RegisterForm
           onSubmit={onSubmit}
           values={values}
           handleChange={handleChange}
