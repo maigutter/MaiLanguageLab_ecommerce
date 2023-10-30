@@ -49,7 +49,7 @@ function RegisterForm({ onSubmit, values, handleChange }) {
         />
       </FormControl>
       <Button w="100%" mt="5" type="submit">
-        Comprar
+        Enviar
       </Button>
     </form>
   );
