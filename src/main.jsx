@@ -8,7 +8,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIRASE_API_KEY, // si usamos create-react-app debemos usar process.env.nombre_variable
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
