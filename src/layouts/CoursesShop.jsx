@@ -3,7 +3,7 @@ import PageTitle from "../Components/PageTitle";
 import { useContext } from "react";
 import CardShop from "../Components/Card";
 import useCourses from "../hooks/useCourses";
-import { Flex, Spinner } from "@chakra-ui/react";
+import { Flex, Spinner, Wrap, WrapItem } from "@chakra-ui/react";
 import CartContext from "../context/cart.context";
 
 function CoursesShop() {
@@ -18,7 +18,13 @@ function CoursesShop() {
     <Flex flexDir={"column"}>
       <PageTitle title="Shop" />
       <ItemListContainer greeting="You can find the courses available here" />
-      <CardShop course={courses} handleClick={addItem} />
+      <Wrap spacing="30px">
+        {courses.map((course) => (
+          <WrapItem key={course.id}>
+            <CardShop course={course} handleClick={addItem} />
+          </WrapItem>
+        ))}
+      </Wrap>
     </Flex>
   );
 }
