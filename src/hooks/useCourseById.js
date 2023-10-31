@@ -9,7 +9,7 @@ export default function useCourseById(id) {
   useEffect(() => {
     const db = getFirestore();
 
-    const courseRef = doc(db, "Courses", id);
+    const courseRef = doc(db, "courses", id);
     getDoc(courseRef)
       .then((snapshot) => {
         if (snapshot.exists()) {

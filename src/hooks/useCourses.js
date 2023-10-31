@@ -9,7 +9,7 @@ export default function useCourses() {
   useEffect(() => {
     const db = getFirestore();
 
-    const coursesCollection = collection(db, "Courses");
+    const coursesCollection = collection(db, "courses");
     getDocs(coursesCollection)
       .then((snapshot) => {
         if (!snapshot.empty) {

@@ -8,7 +8,7 @@ function Cart() {
   const { cart } = useContext(CartContext);
   const navigate = useNavigate();
 
-  if (cart.items.length === 0) return <Text>El carrito está vacío</Text>;
+  if (cart.courses.length === 0) return <Text>El carrito está vacío</Text>;
 
   return (
     <Flex flexDir={"column"}>

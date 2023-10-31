@@ -8,23 +8,23 @@ const Navbar_Routes = [
     name: "Shop",
   },
   {
-    path: "/category/individualLessons",
+    path: "/category/individual",
     name: "One-on-one Lessons",
   },
   {
-    path: "/category/groupLessons",
+    path: "/category/group",
     name: "Group Lessons",
   },
   {
-    path: "/category/thematicGroupLessons",
+    path: "/category/thematicGroup",
     name: "Thematic Group Lessons",
   },
   {
-    path: "/teacher/Mai",
+    path: "/teacher/mai",
     name: "Classes with Mai",
   },
   {
-    path: "/teacher/Sabri",
+    path: "/teacher/sabri",
     name: "Classes with Sabri",
   },
   {

@@ -7,52 +7,52 @@ export default function CartProvider({ children }) {
     total: 0,
   });
 
-  const addItem = (item, quantity) => {
-    const { items } = cart;
-    const index = items.findIndex((i) => i.item.id === item.id);
+  const addItem = (course, quantity) => {
+    const { courses } = cart;
+    const index = courses.findIndex((i) => i.course.id === course.id);
 
     if (index > -1) {
-      items[index].quantity += quantity;
+      courses[index].quantity += quantity;
     } else {
-      items.push({
-        item,
+      courses.push({
+        course,
         quantity,
       });
     }
 
     setCart({
       ...cart,
-      items,
+      courses,
       total: getTotal(),
     });
   };
 
-  const removeItem = (itemId) => {
-    const { items } = cart;
-    const index = items.findIndex((i) => i.item.id === itemId);
+  const removeItem = (courseId) => {
+    const { courses } = cart;
+    const index = courses.findIndex((i) => i.course.id === courseId);
 
     if (index > -1) {
-      items.splice(index, 1);
+      courses.splice(index, 1);
     }
 
     setCart({
       ...cart,
-      items,
+      courses,
     });
   };
 
   const clear = () => {
     setCart((prevValues) => ({
       ...prevValues,
-      items: [],
+      courses: [],
       total: 0,
     }));
   };
 
   const getTotal = () => {
-    const { items } = cart;
-    return items.reduce(
-      (acc, item) => acc + item.quantity * item.item.price,
+    const { courses } = cart;
+    return courses.reduce(
+      (acc, course) => acc + course.quantity * course.course.price,
       0
     );
   };

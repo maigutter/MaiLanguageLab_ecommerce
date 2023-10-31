@@ -19,12 +19,12 @@ function CardShop({ course, handleClick }) {
       <CardBody>
         <Image height="140" src={CourseImage} borderRadius="lg" />
         <Stack mt="6" spacing="3">
-          <Heading size="md">{course.Title}</Heading>
+          <Heading size="md">{course.title}</Heading>
           <Text>
-            {course.Category} - Teacher: {course.Teacher}
+            {course.category} - Teacher: {course.teacher}
           </Text>
           <Text color="blue.600" fontSize="2xl">
-            ${course.Price}
+            ${course.price}
           </Text>
         </Stack>
       </CardBody>

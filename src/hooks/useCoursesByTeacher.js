@@ -17,8 +17,8 @@ export default function useCoursesByTeacher(teacher) {
     const db = getFirestore();
 
     const q = query(
-      collection(db, "Courses"),
-      and(where("stock", ">", 0), where("Teacher", "==", teacher))
+      collection(db, "courses"),
+      and(where("stock", ">", 0), where("teacher", "==", teacher))
     );
 
     getDocs(q)

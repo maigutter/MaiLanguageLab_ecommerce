@@ -19,7 +19,7 @@ function Checkout() {
   });
 
   console.log({ values });
-  if (cart.courses.length === 0) return <div>El carrito está vacío</div>;
+  if (cart.items.length === 0) return <div>El carrito está vacío</div>;
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ function Checkout() {
   const sendOrder = () => {
     const db = getFirestore();
 
-    const orderCollection = collection(db, "Orders");
+    const orderCollection = collection(db, "orders");
     addDoc(orderCollection, {
       ...cart,
       buyer: {
@@ -79,7 +79,7 @@ function Checkout() {
   const sendUser = () => {
     const db = getFirestore();
 
-    const userCollection = collection(db, "Users");
+    const userCollection = collection(db, "users");
     addDoc(userCollection, {
       user: {
         name: values.name,
@@ -88,6 +88,7 @@ function Checkout() {
         email: values.email,
         usertype: "student",
         admin: false,
+        password: null,
       },
     }).then(() => {
       toast({

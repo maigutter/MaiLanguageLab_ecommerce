@@ -23,10 +23,10 @@ function CartDetail({ cart }) {
         <Tbody>
           {cart.Courses.map(({ course, quantity }) => (
             <Tr textAlign={"left"} key={course.id}>
-              <Td>{course.Title}</Td>
+              <Td>{course.title}</Td>
               <Td>{quantity}</Td>
-              <Td isNumeric>${course.Price}</Td>
-              <Td isNumeric>${course.Price * quantity}</Td>
+              <Td isNumeric>${course.price}</Td>
+              <Td isNumeric>${course.price * quantity}</Td>
             </Tr>
           ))}
         </Tbody>

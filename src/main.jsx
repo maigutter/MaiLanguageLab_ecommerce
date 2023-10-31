@@ -8,12 +8,12 @@ import { ChakraProvider } from "@chakra-ui/react";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAjkDOwJnosI2CvYi8ze7AQec_GRZwEjaE",
-  authDomain: "mailanguagelabecommerce.firebaseapp.com",
-  projectId: "mailanguagelabecommerce",
-  storageBucket: "mailanguagelabecommerce.appspot.com",
-  messagingSenderId: "709342493209",
-  appId: "1:709342493209:web:7a01cb2f85fd61ad2b8888",
+  apiKey: import.meta.env.VITE_FIRASE_API_KEY, // si usamos create-react-app debemos usar process.env.nombre_variable
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

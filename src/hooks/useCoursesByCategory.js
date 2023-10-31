@@ -17,8 +17,8 @@ export default function useCoursesByCategory(category) {
     const db = getFirestore();
 
     const q = query(
-      collection(db, "Courses"),
-      and(where("stock", ">", 0), where("Category", "==", category))
+      collection(db, "courses"),
+      and(where("stock", ">", 0), where("category", "==", category))
     );
 
     getDocs(q)

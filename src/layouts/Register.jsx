@@ -47,7 +47,7 @@ function Register() {
   const sendUser = () => {
     const db = getFirestore();
 
-    const userCollection = collection(db, "Users");
+    const userCollection = collection(db, "users");
     addDoc(userCollection, {
       user: {
         name: values.name,
@@ -56,6 +56,7 @@ function Register() {
         email: values.email,
         usertype: "student",
         admin: false,
+        password: null,
       },
     }).then(() => {
       toast({
