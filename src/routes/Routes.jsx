@@ -20,11 +20,11 @@ const Navbar_Routes = [
     name: "Thematic Group Lessons",
   },
   {
-    path: "/teacher/mai",
+    path: "/teacher/Mai",
     name: "Classes with Mai",
   },
   {
-    path: "/teacher/sabri",
+    path: "/teacher/Sabri",
     name: "Classes with Sabri",
   },
   {

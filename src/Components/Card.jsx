@@ -21,7 +21,7 @@ function CardShop({ course, handleClick }) {
         <Stack mt="6" spacing="3">
           <Heading size="md">{course.title}</Heading>
           <Text>
-            {course.category} - Teacher: {course.teacher}
+            {course.categoryName} - Teacher: {course.teacher}
           </Text>
           <Text color="blue.600" fontSize="2xl">
             ${course.price}
