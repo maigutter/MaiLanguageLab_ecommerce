@@ -2,14 +2,16 @@ import Brand from "./Brand";
 //import CategoryItem from "./CategoryItem";
 import MenuButton from "./MenuButton";
 import CartWidget from "./Cart/CartWidget";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Navbar_Routes from "../../routes/Routes";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Brand BrandName="M.L.L." />
+        <Link to={"/"}>
+          <Brand BrandName="M.L.L." />
+        </Link>
         <MenuButton />
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 displaySpace">
@@ -26,8 +28,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <CartWidget />
         </div>
+        <Link to={"/cart"}>
+          <CartWidget />
+        </Link>
       </div>
     </nav>
   );

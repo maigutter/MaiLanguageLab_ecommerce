@@ -12,7 +12,7 @@ const CartWidget = () => {
     >
       <CartIcon color="black" />
       <CartItems
-        count={cart.items.reduce((acc, curr) => acc + curr.quantity, 0)}
+        count={cart.courses.reduce((acc, curr) => acc + curr.quantity, 0)}
       />
     </div>
   );

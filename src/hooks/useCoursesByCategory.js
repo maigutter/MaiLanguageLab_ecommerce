@@ -18,7 +18,7 @@ export default function useCoursesByCategory(category) {
 
     const q = query(
       collection(db, "courses"),
-      and(where("stock", ">", 0), where("category", "==", category))
+      and(where("stock", ">", 0), where("category", "===", category))
     );
 
     getDocs(q)

@@ -12,8 +12,10 @@ import {
   CardFooter,
 } from "@chakra-ui/react";
 import CourseImage from "../assets/logo3.jpeg";
+import { useToast } from "@chakra-ui/react";
 
 function CardShop({ course, handleClick }) {
+  const toast = useToast();
   return (
     <Card maxW="sm">
       <CardBody>
@@ -34,7 +36,7 @@ function CardShop({ course, handleClick }) {
           <Button
             variant="solid"
             colorScheme="blue"
-            onClick={() => handleClick(course, 1)}
+            onClick={() => handleClick(course, 1, toast)}
           >
             Add to cart
           </Button>
