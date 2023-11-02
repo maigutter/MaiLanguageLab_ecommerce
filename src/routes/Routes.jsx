@@ -1,3 +1,16 @@
+const categories = ["individual", "group", "thematicGroup"];
+const teachers = ["Mai", "Sabri"];
+
+const categoryRoutes = categories.map((category) => ({
+  path: `/category/${category}`,
+  name: `${category}`,
+}));
+
+const teacherRoutes = teachers.map((teacher) => ({
+  path: `/teacher/${teacher}`,
+  name: ` Classes with ${teacher}`,
+}));
+
 const Navbar_Routes = [
   {
     path: "/",
@@ -7,26 +20,8 @@ const Navbar_Routes = [
     path: "/coursesShop",
     name: "Shop",
   },
-  {
-    path: "/category/individual",
-    name: "One-on-one Lessons",
-  },
-  {
-    path: "/category/group",
-    name: "Group Lessons",
-  },
-  {
-    path: "/category/thematicGroup",
-    name: "Thematic Group Lessons",
-  },
-  {
-    path: "/teacher/Mai",
-    name: "Classes with Mai",
-  },
-  {
-    path: "/teacher/Sabri",
-    name: "Classes with Sabri",
-  },
+  ...categoryRoutes,
+  ...teacherRoutes,
   {
     path: "/checkout",
     name: "Checkout",

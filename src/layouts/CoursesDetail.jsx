@@ -9,7 +9,7 @@ import CartContext from "../context/cart.context";
 
 function CoursesDetail() {
   const params = useParams();
-  const { course, isLoading } = useCourseById(params.courseId);
+  const { course, isLoading } = useCourseById(params.courseDetail);
   const { addItem } = useContext(CartContext);
 
   if (isLoading) {
@@ -19,6 +19,7 @@ function CoursesDetail() {
   if (!course) {
     return <h3>Sorry! We can not find the course</h3>;
   }
+
   return (
     <Flex flexDir={"column"}>
       <PageTitle title="Detalle del Curso" />

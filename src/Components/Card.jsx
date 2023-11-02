@@ -38,7 +38,7 @@ function CardShop({ course, handleClick }) {
           >
             Add to cart
           </Button>
-          <Link to={"/coursesShop/" + course.id}>Learn More</Link>
+          <Link to={`/coursesShop/${course.id}`}>Learn More</Link>
         </ButtonGroup>
       </CardFooter>
     </Card>
