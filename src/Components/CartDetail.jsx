@@ -21,7 +21,7 @@ function CartDetail({ cart }) {
           </Tr>
         </Thead>
         <Tbody>
-          {cart.Courses.map(({ course, quantity }) => (
+          {cart.courses.map(({ course, quantity }) => (
             <Tr textAlign={"left"} key={course.id}>
               <Td>{course.title}</Td>
               <Td>{quantity}</Td>
