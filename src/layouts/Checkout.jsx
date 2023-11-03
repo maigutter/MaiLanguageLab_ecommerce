@@ -29,7 +29,7 @@ function Checkout() {
           title: "Error",
           description: "Todos los campos son obligatorios",
           status: "error",
-          duration: 9000,
+          duration: 5000,
           isClosable: true,
         });
         return;
@@ -41,7 +41,7 @@ function Checkout() {
         title: "Error",
         description: "Los emails no coinciden",
         status: "error",
-        duration: 9000,
+        duration: 5000,
         isClosable: true,
       });
       return;
