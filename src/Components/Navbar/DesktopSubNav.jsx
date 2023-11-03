@@ -8,11 +8,11 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, link, subLabel }) => {
   return (
     <Box
       as="a"
-      href={href}
+      href={link}
       role={"group"}
       display={"block"}
       p={2}

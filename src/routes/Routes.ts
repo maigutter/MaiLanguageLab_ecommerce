@@ -2,16 +2,16 @@ interface NavItem {
   label: string;
   subLabel?: string;
   children?: Array<NavItem>;
-  href?: string;
+  link?: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    href: "/",
+    link: "/",
     label: "Inicio",
   },
   {
-    href: "/coursesShop",
+    link: "/coursesShop",
     label: "Shop",
   },
   {
@@ -19,11 +19,11 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: "Classes with Mai",
-        href: "/teacher/Mai",
+        link: "/teacher/Mai",
       },
       {
         label: "Classes with Sabri",
-        href: "/teacher/Sabri",
+        link: "/teacher/Sabri",
       },
     ],
   },
@@ -32,15 +32,15 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: "Individual Classes",
-        href: "/category/individual",
+        link: "/category/individual",
       },
       {
         label: "Group Classes",
-        href: "/category/group",
+        link: "/category/group",
       },
       {
         label: "Thematic Group Classes",
-        href: "/category/thematicGroup",
+        link: "/category/thematicGroup",
       },
     ],
   },

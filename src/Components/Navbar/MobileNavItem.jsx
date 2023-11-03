@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, link }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -17,7 +17,7 @@ const MobileNavItem = ({ label, children, href }) => {
       <Box
         py={2}
         as="a"
-        href={href ?? "#"}
+        href={link ?? "#"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
