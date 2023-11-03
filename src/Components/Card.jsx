@@ -10,9 +10,9 @@ import {
   Button,
   CardBody,
   CardFooter,
+  useToast,
 } from "@chakra-ui/react";
 import CourseImage from "../assets/logo3.jpeg";
-import { useToast } from "@chakra-ui/react";
 
 function CardShop({ course, handleClick }) {
   const toast = useToast();

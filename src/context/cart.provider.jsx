@@ -71,6 +71,25 @@ export default function CartProvider({ children }) {
     });
   };
 
+  const removeItemUnit = (courseId) => {
+    const { courses } = cart;
+    const index = courses.findIndex((item) => item.course.id === courseId);
+
+    if (index > -1) {
+      if (courses[index].quantity > 1) {
+        courses[index].quantity -= 1;
+      } else {
+        courses.splice(index, 1);
+      }
+    }
+
+    setCart({
+      ...cart,
+      courses,
+      total: getTotal(courses),
+    });
+  };
+
   const clear = () => {
     setCart((prevValues) => ({
       ...prevValues,
@@ -92,6 +111,7 @@ export default function CartProvider({ children }) {
         cart,
         addItem,
         removeItem,
+        removeItemUnit,
         clear,
         getTotal,
       }}

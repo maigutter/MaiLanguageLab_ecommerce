@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardBody,
   Table,
@@ -9,13 +10,19 @@ import {
   Th,
   Thead,
   Tr,
+  useToast,
 } from "@chakra-ui/react";
+import { CloseIcon } from "@chakra-ui/icons";
+import CartContext from "../context/cart.context";
+import { useContext } from "react";
 
 function CartDetail({ cart }) {
   const total = cart.courses.reduce((acc, { course, quantity }) => {
     return acc + course.price * quantity;
   }, 0);
-
+  const { removeItem, removeItemUnit, addItem, clear } =
+    useContext(CartContext);
+  const toast = useToast();
   return (
     <div>
       <TableContainer>
@@ -32,7 +39,27 @@ function CartDetail({ cart }) {
             {cart.courses.map(({ course, quantity }) => (
               <Tr textAlign={"left"} key={course.id}>
                 <Td>{course.title}</Td>
-                <Td>{quantity}</Td>
+                <Td>
+                  <button
+                    onClick={() => removeItemUnit(course.id)}
+                    style={{ marginLeft: "7px" }}
+                  >
+                    -
+                  </button>
+                  {quantity}
+                  <button
+                    onClick={() => addItem(course, 1, toast)}
+                    style={{ marginRight: "7px" }}
+                  >
+                    +
+                  </button>
+                  <button
+                    onClick={() => removeItem(course.id)}
+                    style={{ marginLeft: "7px" }}
+                  >
+                    <CloseIcon />
+                  </button>
+                </Td>
                 <Td isNumeric>${course.price}</Td>
                 <Td isNumeric>${course.price * quantity}</Td>
               </Tr>
@@ -45,6 +72,9 @@ function CartDetail({ cart }) {
           <Text>Total Price: ${total}</Text>
         </CardBody>
       </Card>
+      <Button onClick={() => clear()} style={{ marginLeft: "7px" }}>
+        <CloseIcon /> Limpiar Carrito
+      </Button>
     </div>
   );
 }
