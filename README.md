@@ -14,7 +14,7 @@ You can checkout [Coderhouse](https://www.coderhouse.com/) as well if you want t
 
 ## Cool! Is the project finished?
 
-Yes and no! Right now you are seeing the **Final Delivery** for the project, which means that it's ready for revision from my tutors and it's a working page, quite a bit better than a MVP. But I still plan to add on new features and improve the page.
+Yes and no! Right now you are seeing the **Final Delivery** for the project, which means that it's ready for revision from my tutors and it's a working page, quite a bit better than a MVP. But I still plan to add on new features and improve the page, adding new features and also adding backend in the near future. On top of that, this project's requirements were focused on functionality, which is why the UI is still a work in progress. I'll be improving the interface little by little in the next couple of days.
 
 **Stay tuned! Much more is coming!**
 
@@ -27,6 +27,10 @@ If you want to know more about the page, read the info on the site 😊 Or use a
 ## Perfect! So where can I see the page?
 
 **The link for the page [will be added here soon](https://).**
+
+## Anything else we should bear in mind?
+
+Yes! You should know that right now you're seeing the .env because this is a project that needs to be reviewed, so I didn't include the .env in the gitignore. But this won't be the case for long, so soon if you want to see the page working you'll need to use the deployed version (available above)
 
 ---
 
@@ -46,7 +50,7 @@ También podés mirar la página de [Coderhouse](https://www.coderhouse.com/).
 
 ## ¡Piola! ¿Y el proyecto está terminado?
 
-¡Sí y no! Ahora mismo estás viendo la **Entrega final** del proyecto, lo que quiere decir que está listo para ser revisado por el equipo de profesores de Coderhouse. Es una versión funcional, bastante mejor que un MVP. Pero igualmente planeo sumarle un montón de nuevas funcionalidades, especialmente agregando backend en el futuro cercano.
+¡Sí y no! Ahora mismo estás viendo la **Entrega final** del proyecto, lo que quiere decir que está listo para ser revisado por el equipo de profesores de Coderhouse. Es una versión funcional, bastante mejor que un MVP. Pero igualmente planeo sumarle un montón de nuevas funcionalidades, especialmente agregando backend en el futuro cercano. Además, esta entrega estaba enfocada en la funcionalidad, con lo cual todo lo que es estilos y UI está en proceso. Voy a estar emprolijando la interfaz con css poco a poco en los próximos días.
 
 **¡Estate atente! ¡Se viene mucho más!**
 
@@ -61,3 +65,7 @@ Si querés saber más de Mai Language Lab, podés leer la info en la web o conta
 ## ¡Perfecto! ¿Y dónde puedo ver la página?
 
 **El link de la página [va a ser agregado acá pronto](https://).**
+
+## ¿Algo más a tener en cuenta?
+
+¡Sí! Considerá que en este momento, estás viendo las variables de entorno en el código porque, al ser una entrega que necesita ser revisada, no las incluí en el gitignore para que el equipo docente de coderhouse pueda verlas. Estas variables no van a seguir disponibles en el futuro, así que pronto si querés ver la app funcionando vas a tener que entrar al link de arriba y ver la versión deployada.
