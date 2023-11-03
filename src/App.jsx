@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GeneralTitle from "./Components/GeneralTitle";
-import Navbar from "./Components/Navbar/Navbar";
 import CoursesDetail from "./layouts/CoursesDetail";
 import Home from "./layouts/Home";
 import CoursesShop from "./layouts/CoursesShop";
@@ -10,11 +9,12 @@ import Register from "./layouts/Register";
 import Cart from "./layouts/Cart";
 import Category from "./layouts/Category";
 import Teacher from "./layouts/Teacher";
+import NavbarChakra from "./Components/Navbar/NavbarChakra";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <NavbarChakra />
       <GeneralTitle />
       <Routes>
         <Route exact path="/" element={<Home />} />

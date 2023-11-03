@@ -15,6 +15,13 @@ export default function CartProvider({ children }) {
       if (index > -1) {
         if (courses[index].quantity + quantity <= course.stock) {
           courses[index].quantity += quantity;
+          toast({
+            title: "Added to the cart!",
+            description: "Tu producto ha sido agregado al carrito",
+            status: "success",
+            duration: 1000,
+            isClosable: true,
+          });
         } else {
           toast({
             title: "No More Spots Available",

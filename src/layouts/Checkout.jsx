@@ -18,8 +18,7 @@ function Checkout() {
     email2: "",
   });
 
-  console.log({ values });
-  if (cart.items.length === 0) return <div>El carrito está vacío</div>;
+  if (cart.courses.length === 0) return <div>El carrito está vacío</div>;
 
   const onSubmit = (e) => {
     e.preventDefault();
