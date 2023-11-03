@@ -6,8 +6,8 @@ import { useContext } from "react";
 import CartContext from "../context/cart.context";
 
 function Category() {
-  const params = useParams();
-  const { courses, isLoading } = useCoursesByCategory(params.category);
+  const { category } = useParams();
+  const { courses, isLoading } = useCoursesByCategory(category);
   const { addItem } = useContext(CartContext);
 
   if (isLoading) {
@@ -15,11 +15,11 @@ function Category() {
   }
 
   if (courses.length === 0)
-    return <div>No hay productos con la catogría: {params.category}</div>;
+    return <div>No hay productos con la catogría: {category}</div>;
 
   return (
     <Flex flexDir={"column"} gap="3">
-      <Heading>Productos de categoría: {params.category}</Heading>
+      <Heading>Productos de categoría: {category}</Heading>
       <Wrap spacing={"30px"}>
         {courses.map((course) => (
           <WrapItem key={course.id}>
