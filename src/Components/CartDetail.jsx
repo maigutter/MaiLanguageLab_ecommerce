@@ -40,25 +40,25 @@ function CartDetail({ cart }) {
               <Tr textAlign={"left"} key={course.id}>
                 <Td>{course.title}</Td>
                 <Td>
-                  <button
+                  <Button
                     onClick={() => removeItemUnit(course.id)}
                     style={{ marginLeft: "7px" }}
                   >
                     -
-                  </button>
+                  </Button>
                   {quantity}
-                  <button
+                  <Button
                     onClick={() => addItem(course, 1, toast)}
                     style={{ marginRight: "7px" }}
                   >
                     +
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     onClick={() => removeItem(course.id)}
                     style={{ marginLeft: "7px" }}
                   >
                     <CloseIcon />
-                  </button>
+                  </Button>
                 </Td>
                 <Td isNumeric>${course.price}</Td>
                 <Td isNumeric>${course.price * quantity}</Td>
