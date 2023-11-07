@@ -67,9 +67,9 @@ function Checkout() {
     }).then(({ id }) => {
       toast({
         title: "Orden enviada",
-        description: `El id de la orden es: ${id}`,
+        description: `¡Tu compra fue exitosa! El identificador es ${id}, y el total es $${cart.total}. Vas a recibir un mail y un mensaje de whatsapp con toda la información de tu orden y los datos de pago.`,
         status: "success",
-        duration: 9000,
+        duration: 15000,
         isClosable: true,
       });
     });
