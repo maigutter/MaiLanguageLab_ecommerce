@@ -26,7 +26,7 @@ If you want to know more about the page, read the info on the site 😊 Or use a
 
 ## Perfect! So where can I see the page?
 
-**The link for the page is [here](mailanguagelabecommerce-production.up.railway.app).**
+**The link for the page is [here](https://mailanguagelabecommerce-production.up.railway.app/).**
 
 ## Anything else we should bear in mind?
 
@@ -64,7 +64,7 @@ Si querés saber más de Mai Language Lab, podés leer la info en la web o conta
 
 ## ¡Perfecto! ¿Y dónde puedo ver la página?
 
-**El link de la página está [acá](mailanguagelabecommerce-production.up.railway.app).**
+**El link de la página está [acá](https://mailanguagelabecommerce-production.up.railway.app/).**
 
 ## ¿Algo más a tener en cuenta?
 
